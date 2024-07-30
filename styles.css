@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+.container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.content {
+    width: 100%;
+    text-align: center;
+}
+
+textarea {
+    width: 90%;
+    height: 150px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: none; /* Desactiva el redimensionamiento */
+    -webkit-resize: none; /* Desactiva el redimensionamiento en WebKit */
+    -moz-resize: none; /* Desactiva el redimensionamiento en Firefox */
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.encrypt-btn {
+    background-color: #007bff;
+}
+
+.decrypt-btn {
+    background-color: #5a6268;
+}
+
+.encrypt-btn:hover,
+.decrypt-btn:hover {
+    background-color: #0056b3;
+}
+
+.info {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+.output-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#outputText {
+    width: 100%;
+    height: 150px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: none; /* Desactiva el redimensionamiento */
+    -webkit-resize: none; /* Desactiva el redimensionamiento en WebKit */
+    -moz-resize: none; /* Desactiva el redimensionamiento en Firefox */
+}
+
+.copy-btn {
+    background-color: #28a745;
+}
+
+.copy-btn:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    
+    textarea, #outputText {
+        height: 120px;
+    }
+    
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    textarea, #outputText {
+        height: 100px;
+    }
+    
+    .buttons {
+        flex-direction: column;
+    }
+    
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

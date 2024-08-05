@@ -1,10 +1,14 @@
 const textArea = document.querySelector(".text-area");
-const mensaje = document.querySelector(".mensaje-error");
+const mensaje = document.querySelector(".mensaje");
+const mensajeError = document.querySelector(".mensaje-error");
 const botonCopiar = document.querySelector(".btn-copiar");
+
 
 function btnEncriptar() {
     const textoEncriptado = encriptar(textArea.value);
     mensaje.textContent = textoEncriptado;
+    textArea.value = "";
+    mensaje.style.backgroundImage = "none"
 }
 
 function encriptar(stringEncriptada) {
@@ -20,9 +24,10 @@ function encriptar(stringEncriptada) {
 }
 
 function btnDesencriptar() {
-    const textoEncriptado = desencriptar(textArea.value);
-    mensaje.textContent = textoEncriptado;
+    const textoDesencriptado = desencriptar(textArea.value);
+    mensaje.textContent = textoDesencriptado;
     textArea.value = "";
+    mensaje.style.backgroundImage = "none"
 }
 
 function desencriptar(stringDesencriptada) {

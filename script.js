@@ -17,7 +17,7 @@ function btnEncriptar() {
     mensaje.textContent = textoEncriptado;
     textArea.value = "";
     mensaje.style.backgroundImage = "none";
-    mensajeError.innerHTML = ""; // Clear the error message
+    mensajeError.innerHTML = ""; // Borra el mensaje de error si el texto se ha encriptado correctamente
 }
 
 function encriptar(stringEncriptada) {
@@ -41,7 +41,7 @@ function btnDesencriptar() {
     mensaje.textContent = textoDesencriptado;
     textArea.value = "";
     mensaje.style.backgroundImage = "none";
-    mensajeError.innerHTML = ""; // Clear the error message
+    mensajeError.innerHTML = ""; // Borra el mensaje de error si el texto se ha desencriptado correctamente
 }
 
 function desencriptar(stringDesencriptada) {

@@ -4,68 +4,80 @@
     font-weight: 400;
     font-size: 22px;
     line-height: 150%;
-}
-
-.logo {
+    box-sizing: border-box; /* box-sizing para que los elementos se ajusten al ancho y alto definidos */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .logo {
     padding-top: 10px;
     margin-left: 10px;
     width: 5%;
     height: 48px;
     width: 120px;
-}
-
-main {
+  }
+  
+  main {
     display: flex;
     margin-bottom: 50px;
     margin-left: 80px;
-}
-
-.text-area {
+    flex-wrap: wrap; /* flex-wrap para que los elementos se ajusten al ancho de la pantalla */
+  }
+  
+  .text-area {
     border: none;
     color: #0A3871;
     margin-top: 60px;
     text-transform: lowercase;
-    margin-left: 80px;
+    margin-left: 50px;
     font-size: 32px;
-}
-
-::placeholder {
+    width: 100%; /* width para que el textarea se ajuste al ancho de la pantalla */
+    padding: 10px; /* padding para que el textarea tenga un espacio entre el borde y el texto */
+  }
+  
+  ::placeholder {
     color: #0A3871;
-}
-
-.text-area:focus {
+  }
+  
+  .text-area:focus {
     outline: none;
-}
-
-.mensaje {
+  }
+  
+  .mensaje {
     background: white;
     background-image: url("img/Muñeco.png");
     background-repeat: no-repeat;
+    background-position: center;
     border: none;
     border-radius: 24px;
     color: #0A3871;
-    margin-left: 98px;
+    margin-left: 70px;
     margin-top: 20px;
-    padding-left: 20px;
+    padding: 20px;
     position: relative;
-    height: 610px;
-}
-
-.mensaje-error {
+    height: 575px;
+    width: 100%; /* width para que el mensaje se ajuste al ancho de la pantalla */
+    overflow-y: auto; /* Añade barra de desplazamiento vertical si es necesario */
+    word-wrap: break-word; /* Asegura que las palabras largas se ajusten */
+  }
+  
+  .mensaje-error {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: #19191a;
-}
-
-.botones {
+    width: 80%; /* Ajusta el ancho del mensaje de error */
+  }
+  
+  .botones {
     display: flex;
     margin-top: 18px;
-}
-
-.btn-desencriptar {
+    flex-wrap: wrap; /* flex-wrap para que los botones se ajusten al ancho de la pantalla */
+  }
+  
+  .btn-desencriptar {
     background: #D8DFE8;
     border: 1px solid #0A3871;
     border-radius: 24px;
@@ -75,9 +87,10 @@ main {
     margin-left: 30px;
     width: 328px;
     font-size: 16px;
-}
-
-.btn-encriptar {
+    margin-bottom: 10px; /* margin-bottom para que los botones tengan un espacio entre ellos */
+  }
+  
+  .btn-encriptar {
     background: #0A3871;
     border: 1px solid #0A3871;
     border-radius: 24px;
@@ -86,43 +99,64 @@ main {
     height: 67px;
     width: 328px;
     font-size: 16px;
-}
-
-.botones-copiar {
+    margin-bottom: 10px; /* margin-bottom para que los botones tengan un espacio entre ellos */
+  }
+  
+  .botones-copiar {
     display: none;
     margin-top: 18px;
     margin-left: 98px;
-}
-
-.btn-copiar {
+  }
+  
+  .btn-copiar {
     border: 1px solid #0A3871;
     border-radius: 24px;
     color: #0A3871;
     cursor: pointer;
     height: 67px;
     width: 336px;
-    margin-left: 100px;
+    margin-left: 120px;
     font-size: 16px;
-}
-
-.informacion {
+    margin-bottom: 10px; /* margin-bottom para que los botones tengan un espacio entre ellos */
+  }
+  
+  .informacion {
     font-family: 'Inter';
     font-weight: 300;
     font-size: 12px;
     color: gray;
     margin-left: 8px;
-}
-
-.info-container {
+  }
+  
+  .info-container {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
-}
-
-.logo2 {
+  }
+  
+  .logo2 {
     width: 16px;
     height: 16px;
     margin-right: 8px;
-}
+  }
+  
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 768px) {
+    main {
+      flex-direction: column; /* flex-direction para que los elementos se ajusten al ancho de la pantalla */
+    }
 
+    .text-area {
+      font-size: 24px; /* font-size para que el textarea se ajuste al ancho de la pantalla */
+    }
 
+    .botones {
+      flex
+    }
+
+    .mensaje {
+        width: 90%; /* Ajusta el ancho en dispositivos móviles */
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+  }
